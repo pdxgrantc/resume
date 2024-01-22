@@ -1,4 +1,4 @@
-import React from 'react'
+import PropTypes from 'prop-types';
 
 export default function Projects({ children }) {
   return (
@@ -15,12 +15,23 @@ export default function Projects({ children }) {
   )
 }
 
-function Project({ name, link }) {
+Projects.propTypes = {
+  children: PropTypes.node,
+}
+
+
+function Project({ name, link}) {
   return (
     <div>
       <h4 className=''>{name}</h4>
+      <a href={link}>{link}</a>
     </div>
   )
+}
+
+Project.propTypes = {
+  name: PropTypes.string,
+  link: PropTypes.string,
 }
 
 

@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import PropTypes from 'prop-types';
+import { useState } from 'react'
 
 export default function Header({ title }) {
   return (
@@ -6,6 +7,10 @@ export default function Header({ title }) {
       <DesktopHeader title={title} />
     </div>
   )
+}
+
+Header.propTypes = {
+  title: PropTypes.string,
 }
 
 
@@ -19,6 +24,11 @@ function DesktopHeader({ title }) {
     </div>
   )
 }
+
+DesktopHeader.propTypes = {
+  title: PropTypes.string,
+}
+
 
 const DropdownMenu = () => {
   const [isOpen, setIsOpen] = useState(false);

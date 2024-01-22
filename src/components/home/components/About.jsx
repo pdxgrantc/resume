@@ -1,4 +1,4 @@
-import React from 'react'
+import PropTypes from 'prop-types';
 
 // icons
 import { MdPerson as Person } from 'react-icons/md'
@@ -24,4 +24,8 @@ export default function About({ children }) {
       </div>
     </div>
   )
+}
+
+About.propTypes = {
+  children: PropTypes.node,
 }

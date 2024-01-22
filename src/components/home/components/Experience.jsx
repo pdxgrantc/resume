@@ -1,4 +1,4 @@
-import React from 'react'
+import PropTypes from 'prop-types';
 
 // icons
 import { RiJavascriptFill as Javascript } from 'react-icons/ri'
@@ -19,6 +19,11 @@ export default function Experience({ children }) {
     </div>
   )
 }
+
+Experience.propTypes = {
+  children: PropTypes.node,
+}
+
 
 function Skills() {
   return (
@@ -57,6 +62,7 @@ function Skills() {
   )
 }
 
+
 function Skill({ children }) {
   return (
     <div className='w-[18rem] border-accent_red border-b-[3px]'>
@@ -65,4 +71,8 @@ function Skill({ children }) {
       </div>
     </div>
   )
+}
+
+Skill.propTypes = {
+  children: PropTypes.node,
 }
