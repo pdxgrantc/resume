@@ -9,16 +9,10 @@ lerna-debug.log*
 
 node_modules
 dist
-build
 dist-ssr
 *.local
 
-# Firebase Hosting files
-.firebase/
-.firebaserc
-firebase.json
-firestore.indexes.json
-firestore.rules
+build/*
 
 
 # Editor directories and files
