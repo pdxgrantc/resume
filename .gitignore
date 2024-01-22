@@ -10,9 +10,16 @@ lerna-debug.log*
 node_modules
 dist
 build
-.firebase/
 dist-ssr
 *.local
+
+# Firebase Hosting files
+.firebase/
+.firebaserc
+firebase.json
+firestore.indexes.json
+firestore.rules
+
 
 # Editor directories and files
 .vscode/*
