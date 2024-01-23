@@ -33,3 +33,15 @@ OutsideLink.propTypes = {
   children: PropTypes.node,
   link: PropTypes.string,
 };
+
+export const ContentHeader = ({ title }) => {
+  return (
+    <h2 className="font-bold text-lheader border-b-[.3rem] w-fit border-accent_red leading-[5rem]">
+      {title}
+    </h2>
+  );
+};
+
+ContentHeader.propTypes = {
+  title: PropTypes.string,
+};

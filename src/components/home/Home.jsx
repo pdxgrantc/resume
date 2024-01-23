@@ -9,12 +9,13 @@ import { storage } from "../../firebase";
 import { ref, getDownloadURL } from "@firebase/storage";
 
 // components
-import { ButtonStyle } from "../../Lib";
+import { ButtonStyle, ContentHeader } from "../../Lib";
 import Header from "../../header/Header";
 import Footer from "../../footer/Footer";
 import About from "./components/About";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
+import CurrentProject from "./components/CurrentProject";
 
 export default function Home() {
   const [url, setUrl] = useState(null);
@@ -154,25 +155,26 @@ export default function Home() {
           </Header>
         </div>
         <div className="flex flex-col gap mx-page">
-          <div ref={aboutRef}>
-            <About>
-              <h2 className="font-bold text-lheader border-b-[.3rem] w-fit border-accent_red leading-[5rem]">
-                About
-              </h2>
-            </About>
+          <div ref={aboutRef} className="grid grid-cols-5 gap-16">
+            <div className="col-span-2">
+              <About>
+                <ContentHeader title={"About"} />
+              </About>
+            </div>
+            <div className="col-span-3 w-full h-full">
+              <CurrentProject>
+                <ContentHeader title={"Current Project"} />
+              </CurrentProject>
+            </div>
           </div>
           <div ref={experienceRef}>
             <Experience>
-              <h2 className="font-bold text-lheader border-b-[.3rem] w-fit border-accent_red leading-[5rem]">
-                Experience
-              </h2>
+              <ContentHeader title={"Experience"} />
             </Experience>
           </div>
           <div ref={projectsRef}>
             <Projects>
-              <h2 className="font-bold text-lheader border-b-[.3rem] w-fit border-accent_red leading-[5rem]">
-                Projects
-              </h2>
+              <ContentHeader title={"Projects"} />
             </Projects>
           </div>
         </div>
