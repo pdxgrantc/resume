@@ -7,7 +7,7 @@ export default function CurrentProject({ children }) {
   return (
     <div>
       {children}
-      <ClipIcon className="w-[30%] h-auto mx-auto" />
+      <ClipIcon className="w-[30%] h-auto mx-auto my-8" />
       <p>
         I am a student at Oregon State University studying computer science. I
         expect to graduate in March of 2025 with a Bachelors degree in Computer
