@@ -48,7 +48,7 @@ function Skills() {
       </Skill>
       <Skill>
         <Tailwind className='h-full w-fit mx-0' />
-        <p>CSS</p>
+        <p>TailwindCSS</p>
       </Skill>
       <Skill>
         <Firebase className='h-full w-fit mx-0' />
