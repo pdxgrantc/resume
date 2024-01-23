@@ -1,35 +1,35 @@
-import PropTypes from 'prop-types';
-import { useState } from 'react'
+import PropTypes from "prop-types";
 
-export default function Header({ title }) {
+export default function Header({ title, children }) {
   return (
     <div>
-      <DesktopHeader title={title} />
+      <DesktopHeader title={title}> {children} </DesktopHeader>
     </div>
-  )
+  );
 }
 
 Header.propTypes = {
   title: PropTypes.string,
-}
+  children: PropTypes.node,
+};
 
-
-function DesktopHeader({ title }) {
+function DesktopHeader({ title, children }) {
   return (
-    <div className='h-[5rem] bg-black mb-10'>
-      <div className='mx-page flex justify-between'>
-        <h1 className='text-header font-semibold'>{title}</h1>
-        <DropdownMenu />
+    <div className="h-[5rem] bg-black mb-10">
+      <div className="mx-page flex justify-between">
+        <h1 className="text-header font-semibold">{title}</h1>
+        <div className="flex gap-5">{children}</div>
       </div>
     </div>
-  )
+  );
 }
 
 DesktopHeader.propTypes = {
   title: PropTypes.string,
-}
+  children: PropTypes.node,
+};
 
-
+/*
 const DropdownMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [subMenuOpen, setSubMenuOpen] = useState(false);
@@ -64,3 +64,4 @@ const DropdownMenu = () => {
     </div>
   );
 };
+*/

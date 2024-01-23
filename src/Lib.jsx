@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 
 export const BottomBorder = ({ children, click }) => {
     return (
@@ -5,4 +6,9 @@ export const BottomBorder = ({ children, click }) => {
             {children}
         </button>
     );
+};
+
+BottomBorder.propTypes = {
+    children: PropTypes.node,
+    click: PropTypes.func,
 };

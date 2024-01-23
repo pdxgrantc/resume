@@ -49,6 +49,11 @@ export default {
         '2.5': '0.625rem',
         '3.5': '0.875rem',
       },
+      screens: {
+        desktop: { min: "1250px" },
+        half_screen: { min: "600px", max: "1249px" },
+        mobile: { max: "599px" },
+      },
     },
   },
   plugins: [],
