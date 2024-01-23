@@ -155,7 +155,7 @@ export default function Home() {
           </Header>
         </div>
         <div className="flex flex-col gap mx-page">
-          <div ref={aboutRef} className="grid grid-cols-5 gap-16">
+          <div ref={aboutRef} className="grid grid-cols-5 gap-[7rem]">
             <div className="col-span-2">
               <About>
                 <ContentHeader title={"About"} />
