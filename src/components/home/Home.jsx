@@ -9,7 +9,7 @@ import { storage } from "../../firebase";
 import { ref, getDownloadURL } from "@firebase/storage";
 
 // components
-import { BottomBorder } from "../../Lib";
+import { ButtonStyle } from "../../Lib";
 import Header from "../../header/Header";
 import Footer from "../../footer/Footer";
 import About from "./components/About";
@@ -131,10 +131,10 @@ export default function Home() {
                 Student at Oregon State University
               </h3>
             </div>
-            <BottomBorder click={scrollToWork}>
+            <ButtonStyle click={scrollToWork}>
               <p className="text-sheader">View my work</p>
               <DownArrow className="h-8 w-auto my-auto" />
-            </BottomBorder>
+            </ButtonStyle>
           </div>
         </div>
         <div
@@ -142,15 +142,15 @@ export default function Home() {
           className={`sticky-navbar${isSticky ? " sticky" : ""}`}
         >
           <Header title={"Grant Conklin"}>
-            <BottomBorder click={scrollToAbout}>
+            <ButtonStyle click={scrollToAbout}>
               <p className="text-xlarge">About</p>
-            </BottomBorder>
-            <BottomBorder click={scrollToExperience}>
+            </ButtonStyle>
+            <ButtonStyle click={scrollToExperience}>
               <p className="text-xlarge">Experience</p>
-            </BottomBorder>
-            <BottomBorder click={scrollToProjects}>
+            </ButtonStyle>
+            <ButtonStyle click={scrollToProjects}>
               <p className="text-xlarge">Projects</p>
-            </BottomBorder>
+            </ButtonStyle>
           </Header>
         </div>
         <div className="flex flex-col gap mx-page">
