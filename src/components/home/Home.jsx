@@ -141,9 +141,7 @@ export default function Home() {
           ref={headerRef}
           className={`sticky-navbar${isSticky ? " sticky" : ""}`}
         >
-          <Header
-            title={"Grant Conklin"}
-          >
+          <Header title={"Grant Conklin"}>
             <BottomBorder click={scrollToAbout}>
               <p className="text-xlarge">About</p>
             </BottomBorder>
