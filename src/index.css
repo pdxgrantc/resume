@@ -22,6 +22,7 @@
 .buttons {
   background: none;
   border: 0;
+  height: fit-content;
   padding-bottom: 3px;
   box-sizing: border-box;
   border-bottom: 3px solid transparent;
