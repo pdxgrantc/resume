@@ -20,22 +20,24 @@ import CurrentProject from "./components/CurrentProject";
 export default function Home() {
   const [url, setUrl] = useState(null);
 
+  // Get home page image url from firebase storage
   const getURL = async () => {
     const storageRef = ref(storage, "HomeProfile.jpg");
     const url = await getDownloadURL(storageRef);
     setUrl(url);
   };
-
   useEffect(() => {
     getURL();
   }, []);
 
+  // Refs for scrolling to sections
   const headerRef = useRef(null);
   const aboutRef = useRef(null);
   const experienceRef = useRef(null);
   const projectsRef = useRef(null);
 
-  const scrollToWork = () => {
+  // Scroll to start of the page content
+  const scrollToHeader = () => {
     if (headerRef.current) {
       // Scroll to the target div
       headerRef.current.scrollIntoView({
@@ -132,7 +134,7 @@ export default function Home() {
                 Student at Oregon State University
               </h3>
             </div>
-            <ButtonStyle click={scrollToWork}>
+            <ButtonStyle click={scrollToHeader}>
               <p className="text-sheader">View my work</p>
               <DownArrow className="h-8 w-auto my-auto" />
             </ButtonStyle>
