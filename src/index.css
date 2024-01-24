@@ -12,13 +12,14 @@
 }
 
 .sticky-navbar.sticky {
+  z-index: 10;
   position: fixed;
   top: 0;
   width: 100%;
 }
 
 .sticky-navbar-padding {
-  
+  margin-top: 5rem;
 }
 
 

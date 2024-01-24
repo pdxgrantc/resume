@@ -84,7 +84,7 @@ export default function Home() {
       // Calculate the new scroll position with an offset
       const newScrollPosition =
         referencePosition -
-        7.5 * parseFloat(getComputedStyle(document.documentElement).fontSize);
+        6 * parseFloat(getComputedStyle(document.documentElement).fontSize);
 
         // Scroll to the new position
       window.scrollTo({
@@ -96,8 +96,6 @@ export default function Home() {
 
   const scrollToProjects = () => {
     if (projectsRef.current) {
-
-      
       // Get the reference element's position
       const referencePosition = projectsRef.current.offsetTop;
 
