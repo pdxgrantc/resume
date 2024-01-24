@@ -47,17 +47,6 @@ export default function Home() {
     }
   };
 
-  /*
-  const scrollToAbout = () => {
-    if (aboutRef.current) {
-      // Scroll to the target div
-      aboutRef.current.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
-  };
-  */
   const scrollToAbout = () => {
     if (aboutRef.current) {
       // Get the reference element's position
@@ -86,7 +75,7 @@ export default function Home() {
         referencePosition -
         6 * parseFloat(getComputedStyle(document.documentElement).fontSize);
 
-        // Scroll to the new position
+      // Scroll to the new position
       window.scrollTo({
         top: newScrollPosition,
         behavior: "smooth",
@@ -104,7 +93,7 @@ export default function Home() {
         referencePosition -
         7.5 * parseFloat(getComputedStyle(document.documentElement).fontSize);
 
-        // Scroll to the new position
+      // Scroll to the new position
       window.scrollTo({
         top: newScrollPosition,
         behavior: "smooth",
