@@ -47,6 +47,7 @@ export default function Home() {
     }
   };
 
+  /*
   const scrollToAbout = () => {
     if (aboutRef.current) {
       // Scroll to the target div
@@ -56,23 +57,59 @@ export default function Home() {
       });
     }
   };
+  */
+  const scrollToAbout = () => {
+    if (aboutRef.current) {
+      // Get the reference element's position
+      const referencePosition = aboutRef.current.offsetTop;
+
+      // Calculate the new scroll position with an offset
+      const newScrollPosition =
+        referencePosition -
+        7.5 * parseFloat(getComputedStyle(document.documentElement).fontSize);
+
+      // Scroll to the new position
+      window.scrollTo({
+        top: newScrollPosition,
+        behavior: "smooth",
+      });
+    }
+  };
 
   const scrollToExperience = () => {
     if (experienceRef.current) {
-      // Scroll to the target div
-      experienceRef.current.scrollIntoView({
+      // Get the reference element's position
+      const referencePosition = experienceRef.current.offsetTop;
+
+      // Calculate the new scroll position with an offset
+      const newScrollPosition =
+        referencePosition -
+        7.5 * parseFloat(getComputedStyle(document.documentElement).fontSize);
+
+        // Scroll to the new position
+      window.scrollTo({
+        top: newScrollPosition,
         behavior: "smooth",
-        block: "start",
       });
     }
   };
 
   const scrollToProjects = () => {
     if (projectsRef.current) {
-      // Scroll to the target div
-      projectsRef.current.scrollIntoView({
+
+      
+      // Get the reference element's position
+      const referencePosition = projectsRef.current.offsetTop;
+
+      // Calculate the new scroll position with an offset
+      const newScrollPosition =
+        referencePosition -
+        7.5 * parseFloat(getComputedStyle(document.documentElement).fontSize);
+
+        // Scroll to the new position
+      window.scrollTo({
+        top: newScrollPosition,
         behavior: "smooth",
-        block: "start",
       });
     }
   };
@@ -156,7 +193,11 @@ export default function Home() {
             </ButtonStyle>
           </Header>
         </div>
-        <div className="flex flex-col gap mx-page">
+        <div
+          className={`flex flex-col gap mx-page ${
+            isSticky ? "sticky-navbar-padding" : ""
+          }`}
+        >
           <div ref={aboutRef} className="grid grid-cols-5 gap-[7rem]">
             <div className="col-span-2">
               <About>

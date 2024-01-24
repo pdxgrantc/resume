@@ -8,7 +8,7 @@ import { IoIosMail as MailLogo } from "react-icons/io";
 
 export default function Footer() {
   return (
-    <diV className="bg-footer w-full mt-20">
+    <diV className="bg-footer w-full mt-20 mb-[1000px]">
       <div className="w-fit mx-auto flex flex-col gap-4">
         <div className="h-16"></div>
         <div className="flex gap-8">
