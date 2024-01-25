@@ -6,9 +6,6 @@ import PropTypes from "prop-types";
 export default function Projects({ children }) {
   return (
     <div>
-      <div className="z-10 relative w-60 h-60 bg-green-700">
-        <div className="absolute z-20 bottom-10 right-10 w-60 h-60 bg-red-700"></div>
-      </div>
       {children}
       <div className="flex gap-20 my-5">
         <Project
@@ -39,14 +36,12 @@ function Project({ name, link, imgName }) {
   });
 
   return (
-    <div className="">
-      <div className="z-[1] relative">
-        <a href={link} target="_blank" rel="noreferrer">
-          <h4 className="">{name}</h4>
-          <img src={url} alt={name} className="w-full h-full" />
-        </a>
-      </div>
-      <div className="w-[50px] bg-red-700 h-[50px] z-0 bottom-10 left-10"></div>
+    <div className="w-full">
+      <h4 className="">{name}</h4>
+      <a className="relative" href={link} target="_blank" rel="noreferrer">
+        <div className="absolute w-full h-full bg-accent_red z-0 top-2 left-2"></div>
+        <img src={url} alt={name} className="relative w-full h-full z-1" />
+      </a>
     </div>
   );
 }
