@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { ref, getDownloadURL } from "firebase/storage";
 import { storage } from "../../../firebase";
 import PropTypes from "prop-types";
+import { OutsideLink } from "../../../Lib";
 
 export default function Projects({ children }) {
   const description =
@@ -13,9 +14,10 @@ export default function Projects({ children }) {
       <div className="flex flex-col gap-20 my-5">
         <Project
           name={"Easy Budget"}
-          link={"https://budget.pdxgrantc.com"}
+          appLink={"https://budget.pdxgrantc.com"}
           imgName={"Budget.jpg"}
           description={description}
+          gitLink={"https://www.github.com/pdxgrantc/budget"}
         />
       </div>
     </div>
@@ -26,7 +28,7 @@ Projects.propTypes = {
   children: PropTypes.node,
 };
 
-function Project({ name, link, imgName, description }) {
+function Project({ name, appLink, imgName, description, gitLink }) {
   const [url, setUrl] = useState(null);
 
   // Get home page image url from firebase storage
@@ -44,10 +46,15 @@ function Project({ name, link, imgName, description }) {
       <div className="col-span-2">
         <h4 className="text-xlheader font-semibold">{name}</h4>
         <p className="text-mdtext">{description}</p>
+        <div className="mx-auto w-fit">
+          <OutsideLink link={gitLink}>
+            <p className="text-medium">View on GitHub</p>
+          </OutsideLink>
+        </div>
       </div>
       <a
         className="relative col-span-5"
-        href={link}
+        href={appLink}
         target="_blank"
         rel="noreferrer"
       >
@@ -60,7 +67,8 @@ function Project({ name, link, imgName, description }) {
 
 Project.propTypes = {
   name: PropTypes.string,
-  link: PropTypes.string,
+  appLink: PropTypes.string,
   imgName: PropTypes.string,
   description: PropTypes.string,
+  gitLink: PropTypes.string,
 };
