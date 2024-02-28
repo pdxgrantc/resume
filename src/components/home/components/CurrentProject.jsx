@@ -9,11 +9,13 @@ export default function CurrentProject({ children }) {
       {children}
       <ClipIcon className="w-[30%] h-auto mx-auto my-8" />
       <p>
-        I am a student at Oregon State University studying computer science. I
-        expect to graduate in March of 2025 with a Bachelors degree in Computer
-        Science with a focus in web and mobile application development. I am
-        currently looking for an internship for the summer of 2024. I am
-        passionate about learning new things and creating new projects.
+        I am currently working on a budgeting application that will allow users
+        to input their spending and income to help them manage their finances.
+        This project is written in React and uses Firebase for the backend and
+        user authentication. I am using Tailwind CSS for the styling, allowing
+        me to create a responsive and visually appealing application. I seleced
+        Chart.js to create visual representations of the user&apos;s spending and
+        income this is pictured in the projects section below.
       </p>
     </div>
   );
