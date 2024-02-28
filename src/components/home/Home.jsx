@@ -188,7 +188,7 @@ export default function Home() {
           <div ref={aboutRef} className="grid grid-cols-5 gap-[7rem]">
             <div className="col-span-2">
               <About>
-                <ContentHeader title={"About"} />
+                <ContentHeader title={"About Me"} />
               </About>
             </div>
             <div className="col-span-3 w-full h-full">
